@@ -1,0 +1,1 @@
+alert( "이거는외부jsHEAD: " + document.body );

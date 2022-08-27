@@ -1,0 +1,20 @@
+<!doctype html>
+<body>
+    <button class="bt" id="id" value = "1"></button>
+    <button class="bt" value = "100"></button>
+</div>
+
+<script>
+    console.log(document.querySelector("#id"));
+    console.log(document.querySelector("#id").id);
+    document.addEventListener('click', function(event){
+        if(event.target.className=="bt"){
+            console.log(event.target);
+            event.target.value++;
+           // event.target.data = event.target.value; 안됨
+           //됨 event.target.textContent = event.target.value;
+           event.target.innerHTML = event.target.value;
+        }
+    })
+</script>
+</body>

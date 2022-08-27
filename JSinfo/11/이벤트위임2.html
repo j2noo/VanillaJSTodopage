@@ -1,0 +1,38 @@
+<!doctype html>
+<body>
+<div id="menu">
+  <button data-action="save">저장하기</button>
+  <button data-action="load">불러오기</button>
+  <button data-action="search">검색하기</button>
+</div>
+
+<script>
+  class Menu {
+    constructor(elem) {
+      this._elem = elem;
+      elem.onclick = this.onClick.bind(this); // (*)
+    }
+
+    save() {
+      alert('저장하기');
+    }
+
+    load() {
+      alert('불러오기');
+    }
+
+    search() {
+      alert('검색하기');
+    }
+
+    onClick(event) {
+      let action = event.target.dataset.action;
+      if (action) {
+        this[action]();
+      }
+    };
+  }
+
+  new Menu(menu);
+</script>
+</body>
